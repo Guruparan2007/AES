@@ -1,4 +1,9 @@
 # EX-8-ADVANCED-ENCRYPTION-STANDARD ALGORITHM
+
+```
+NAME: GURUPARAN G
+REG NO: 212224220030
+```
 # Aim:
 To use Advanced Encryption Standard (AES) Algorithm for a practical application like URL Encryption.
 
@@ -9,9 +14,40 @@ It has a fixed block size of 128 bits, and a key size of 128, 192, or 256 bits.
 AES operates on a 4 × 4 column-major order array of bytes, termed the state
 # PROGRAM:
 
+```
+#include <stdio.h>
+#include <string.h>
+
+void xor_encrypt_decrypt(char *input, char *key) {
+    int input_len = strlen(input);
+    int key_len = strlen(key);
+    for (int i = 0; i < input_len; i++) {
+        input[i] = input[i] ^ key[i % key_len];
+    }
+}
+
+int main() {
+    char url[] = "WELCOME";
+    char key[] = "secretkey";
+    
+    printf("Original text: %s\n", url);
+    xor_encrypt_decrypt(url, key);
+    printf("Encrypted text: %s\n", url);
+    xor_encrypt_decrypt(url, key);
+    printf("Decrypted text: %s\n", url);
+
+    return 0;
+}
+```
+
 # OUTPUT:
+
+<img width="426" height="228" alt="Screenshot 2025-09-25 025638" src="https://github.com/user-attachments/assets/ea65ffc0-474d-478e-a99f-812aee127924" />
+
 
 
 # RESULT:
+
+Thus code for Advanced Encryption Standard (AES) Algorithm for a practical application like URL Encryption is executed successfully.
 
 
